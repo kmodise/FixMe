@@ -4,7 +4,7 @@ import java.net.*;
 public class Server {
     public static void  main(String[] args){
         try{
-            ServerSocket serverSocketObj = new ServerSocket(6666);
+            ServerSocket serverSocketObj = new ServerSocket(3000);
             Socket socketObj = serverSocketObj.accept();
             DataInputStream dis = new DataInputStream(socketObj.getInputStream());
             String str = (String)dis.readUTF();
