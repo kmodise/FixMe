@@ -11,9 +11,9 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="14">
-      <module name="Broker" target="1.14" />
+      <module name="Broker" target="1.7" />
       <module name="KbFixMe" target="14" />
-      <module name="Router" target="1.14" />
+      <module name="Router" target="1.7" />
     </bytecodeTargetLevel>
   </component>
 </project>
