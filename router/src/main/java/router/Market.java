@@ -83,7 +83,7 @@ class Market {
                         break;
                     
                     default:
-                        throw new IllegalArgumentException("invalid mesage");
+                        throw new IllegalArgumentException("invalid message");
                 }
             }
         }

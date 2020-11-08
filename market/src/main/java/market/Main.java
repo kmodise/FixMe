@@ -24,7 +24,6 @@ public class Main {
     {
         brokerMessage = new BrokerMessage();
         market = new Market();
-        /**Display initial Market indices */
         System.out.println(market.getMarket());
     }
 
@@ -47,9 +46,7 @@ public class Main {
         while (true) {
             String line = in.readLine();
             if (line.startsWith("ID")) {
-                //update ui
                 this.id = line.substring(3);
-                // System.out.println("tst " + line + " " + this.id);
             } else {
                 try {
                     parseMsg(line);

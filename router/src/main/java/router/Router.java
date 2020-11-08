@@ -8,15 +8,6 @@ public class Router {
     private static final int BROKER_PORT;
     private static final int MARKET_PORT;
 
-    /**
-     * Static initializers
-     * 
-     * @param tNum
-     * @param client
-     * @param port
-     * @throws Exception
-     */
-
     static {
         BROKER_PORT = 5000;
         MARKET_PORT = 5001;

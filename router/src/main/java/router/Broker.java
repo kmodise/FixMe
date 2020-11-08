@@ -26,18 +26,13 @@ class Broker {
 
     public void run() {
 
-        /**
-         * No Try with resources coz thread spawned from main thread
-         */
-
         try {
             in = new BufferedReader(new InputStreamReader( socket.getInputStream()));
             out = new PrintWriter(socket.getOutputStream(), true);
             out.println("ID: " + id);
 
             Main.brokers.put(id, out);
-            
-            // Awaits for transactions
+
             while ( true ) {
                 String line = in.readLine();
                 brokerMessage.destruct();
@@ -56,7 +51,6 @@ class Broker {
                 Main.brokers.remove(id);
             }
 
-            /** We can't add throws on run coz it is extended */
             try {
                 socket.close();
             }

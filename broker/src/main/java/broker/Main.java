@@ -21,9 +21,9 @@ public class Main {
     JComboBox<String> stnks = new JComboBox<>(stonks);
 
     JFrame frame = new JFrame("Broker");
-    JTextField txtIndex   = new JTextField(40);
-    JTextField txtAmount = new JTextField(40);
-    JTextArea messageArea = new JTextArea(8, 50);
+    JTextField txtIndex   = new JTextField(10);
+    JTextField txtAmount = new JTextField(10);
+    JTextArea messageArea = new JTextArea(8, 10);
     JButton btnBuy = new JButton("Buy");
     JButton btnSell = new JButton("Sell");
 
@@ -61,7 +61,6 @@ public class Main {
 
         btnBuy.addActionListener( e -> {
             String message ="";
-            // System.out.println("item= "+( String )stnks.getSelectedItem());
             message = "49=" + this.id + "|"+ "COMMAND=BUY|" + "INDEX=" + ( String )stnks.getSelectedItem()  + "|" +  "AMOUNT=" + txtAmount.getText() + "|";
             message = sign(message);
             out.println(message);
@@ -128,7 +127,6 @@ public class Main {
             }
         }
 
-        /**Check if msg length is equals checksum w/out the checksm */
         int len = input.length() - ("13=" + brokerMessage.checksum).length();
         if (len != parseInt(brokerMessage.checksum)) {
             throw new IllegalArgumentException("checksum error");

@@ -36,7 +36,6 @@ public class Market {
 
     String sell(String item, int amount) {
         for (Index i : indices) {
-            /** Market cannot have more than 42 of stock */
             if (i.index.equalsIgnoreCase(item) && amount + i.amount <= 42) {
                 i.amount += amount;
                 return "Success ";
