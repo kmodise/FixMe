@@ -16,7 +16,7 @@ public class Main {
     BufferedReader in;
     BrokerMessage brokerMessage;
 
-    String[] stonks = { "GOLD", "SILVER", "PLAT"};
+    String[] stonks = { "GOLD", "SILVER"};
 
     JComboBox<String> stnks = new JComboBox<>(stonks);
 

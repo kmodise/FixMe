@@ -9,7 +9,6 @@ public class Market {
         indices = new ArrayList<>();
         indices.add(new Index(42, "SILVER"));
         indices.add(new Index(42, "GOLD"));
-        indices.add(new Index(42, "PLAT"));
     }
 
     String getMarket() {
@@ -29,7 +28,6 @@ public class Market {
                     return "Success ";
                 }
             }
-            // System.out.println("it "+ item + " "+ i.index );
         }
         return "Not Success";
     }
